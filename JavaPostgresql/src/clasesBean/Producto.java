@@ -2,13 +2,27 @@ package clasesBean;
 
 public class Producto {
 
+	private int id;
 	private String nombre;
 	private int cantidad;
 
 	public Producto(String nombre, int cantidad) {
 		this.nombre = nombre;
 		this.cantidad = cantidad;
+	}
 
+	public Producto(int id, String nombre, int cantidad) {
+		this.id = id;
+		this.nombre = nombre;
+		this.cantidad = cantidad;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getNombre() {
@@ -29,6 +43,6 @@ public class Producto {
 
 	@Override
 	public String toString() {
-		return "Producto [nombre=" + nombre + ", cantidad=" + cantidad + "]";
+		return "Producto [id= " + id + ", nombre=" + nombre + ", cantidad=" + cantidad + "]";
 	}
 }
