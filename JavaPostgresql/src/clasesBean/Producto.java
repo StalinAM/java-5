@@ -1,4 +1,4 @@
-package Singleton;
+package clasesBean;
 
 public class Producto {
 
