@@ -40,7 +40,7 @@ public class ProductCRUD {
 				String nombre = resultSet.getString("nombre");
 				int cantidad = resultSet.getInt("cantidad");
 
-				Producto product = new Producto(nombre, cantidad);
+				Producto product = new Producto(id,nombre, cantidad);
 				products.add(product);
 			}
 		} catch (SQLException e) {
@@ -48,27 +48,29 @@ public class ProductCRUD {
 		}
 		return products;
 	}
-	public static void deleteProduct(Producto producto) {
+
+	public static void deleteProduct(int id) {
 		// USO TRY WITH RESOURCES
 		// La conexion a la base de datos se cierra automaticamente al terminar
 		try (Connection connection = ConexionBase.getConnection();
 				PreparedStatement statement = connection
-						.prepareStatement("INSERT INTO " + TABLE_NAME + " (nombre, cantidad) VALUES (?, ?)")) {
-			statement.setString(1, producto.getNombre());
-			statement.setInt(2, producto.getCantidad());
+						.prepareStatement("DELETE FROM " + TABLE_NAME + " WHERE id = ?")) {
+			statement.setInt(1, id);
 			statement.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
+
 	public static void updateProduct(Producto producto) {
 		// USO TRY WITH RESOURCES
 		// La conexion a la base de datos se cierra automaticamente al terminar
 		try (Connection connection = ConexionBase.getConnection();
 				PreparedStatement statement = connection
-						.prepareStatement("INSERT INTO " + TABLE_NAME + " (nombre, cantidad) VALUES (?, ?)")) {
+						.prepareStatement("UPDATE " + TABLE_NAME + " SET  nombre=?, cantidad=? WHERE id = ?")) {
 			statement.setString(1, producto.getNombre());
 			statement.setInt(2, producto.getCantidad());
+			statement.setInt(3, producto.getId());
 			statement.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
