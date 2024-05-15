@@ -12,7 +12,7 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Producto producto1 = new Producto(3, "camas", 5);
+		Producto producto1 = new Producto(3, "cama", 5);
 //		ProductCRUD.createProduct(producto1);
 		ProductCRUD.updateProduct(producto1);
 //		ProductCRUD.deleteProduct(2);
