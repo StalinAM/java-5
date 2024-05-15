@@ -1,5 +1,9 @@
 package modelos.abs;
 
-public class ProductosCongelados {
+public abstract class ProductosCongelados extends Productos {
+
+	private String fechaEnvasado;
+	private String paisOrigen;
+	private int temperaturarecom;
 
 }
