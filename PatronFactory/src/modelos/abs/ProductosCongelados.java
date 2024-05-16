@@ -4,6 +4,6 @@ public abstract class ProductosCongelados extends Productos {
 
 	private String fechaEnvasado;
 	private String paisOrigen;
-	private int temperaturarecom;
+	private int temperaturaReco;
 
 }
