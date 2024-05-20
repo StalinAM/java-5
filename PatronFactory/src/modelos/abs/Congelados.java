@@ -1,16 +1,8 @@
 package modelos.abs;
 
-public abstract class ProductosCongelados extends Productos {
+public abstract class Congelados extends Productos {
 	
-	private String paisOrigen;
-
-	public String getPaisOrigen() {
-		return paisOrigen;
-	}
-
-	public void setPaisOrigen(String paisOrigen) {
-		this.paisOrigen = paisOrigen;
-	}
+	private String temperatura;
 
 
 }

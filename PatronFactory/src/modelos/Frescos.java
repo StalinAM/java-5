@@ -2,7 +2,7 @@ package modelos;
 
 import modelos.abs.Productos;
 
-public class ProductosFrescos extends Productos{
+public class Frescos extends Productos{
 	private String fechaEnvasado;
 	private String paisOrigen;
 	
