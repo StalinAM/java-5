@@ -1,5 +1,5 @@
 package modelos;
 
 public enum Tipos {
-	Productos, Congelados, Refrigerados, Frescos, CNitrogeno, CAire, CAgua
+	Congelados, Refrigerados, Frescos, CNitrogeno, CAire, CAgua
 }
