@@ -1,0 +1,35 @@
+{
+	"folders": {},
+	"connections": {
+		"sqlite_jdbc-19017d69f21-3469492f92ccb5b0": {
+			"provider": "sqlite",
+			"driver": "sqlite_jdbc",
+			"name": "patrones.db",
+			"save-password": true,
+			"configuration": {
+				"database": "D:\\Documentos\\5to UCE\\patrones-20240610\\factory-crud\\patrones.db",
+				"url": "jdbc:sqlite:D:\\Documentos\\5to UCE\\patrones-20240610\\factory-crud\\patrones.db",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"auth-model": "native"
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": false,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800,
+			"auto-close-connections": true,
+			"close-connections-period": 14400
+		}
+	}
+}
